@@ -24,7 +24,9 @@ _data = {
 script = ExtResource( 2 )
 
 [node name="Ground" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27393, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13353, -1.27414, 0.266706 )
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="Ground"]
 shape = SubResource( 1 )
@@ -40,7 +42,7 @@ shadow_enabled = true
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
 [node name="CameraPivot" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.89057, 0.454846, 0, -0.454846, 0.89057, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.89057, 0.454846, 0, -0.454846, 0.89057, 0, 0, 3.6222 )
 
 [node name="Camera" type="Camera" parent="CameraPivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.70306, 5.85341 )

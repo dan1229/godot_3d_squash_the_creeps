@@ -1,5 +1,7 @@
 extends KinematicBody
 
+signal squashed
+
 export var min_speed = 10.0
 export var max_speed = 18.0
 
@@ -20,5 +22,11 @@ func initialize(start_position, player_position):
 	velocity = velocity.rotated(Vector3.UP, rotation.y)
 
 
+func squash():
+	emit_signal("squashed")
+	queue_free()
+	
+
 func _on_VisibilityNotifier_screen_exited():
 	queue_free()
+	

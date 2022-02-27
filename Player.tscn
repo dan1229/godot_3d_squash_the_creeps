@@ -7,7 +7,7 @@
 radius = 0.973721
 
 [sub_resource type="CylinderShape" id=2]
-radius = 1.41664
+radius = 0.183879
 height = 0.543105
 
 [sub_resource type="Animation" id=3]
@@ -25,7 +25,7 @@ tracks/0/keys = {
 "values": [ 20.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Pivot/player:translation")
+tracks/1/path = NodePath("Pivot/Character:translation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -37,7 +37,7 @@ tracks/1/keys = {
 "values": [ Vector3( 0, 0.5, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Pivot/player:rotation_degrees")
+tracks/2/path = NodePath("Pivot/Character:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -54,7 +54,7 @@ resource_name = "float"
 length = 1.2
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Pivot/player:translation")
+tracks/0/path = NodePath("Pivot/Character:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -63,10 +63,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1.1 ),
 "transitions": PoolRealArray( 1, 3.03142, 2.2974 ),
 "update": 0,
-"values": [ Vector3( 0, 0.5, 0 ), Vector3( 0, 2.5, 0 ), Vector3( 0, 1, 0 ) ]
+"values": [ Vector3( 0, 0.5, 0 ), Vector3( 0, 1.5, 0 ), Vector3( 0, 1, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Pivot/player:rotation_degrees")
+tracks/1/path = NodePath("Pivot/Character:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -85,7 +85,7 @@ script = ExtResource( 2 )
 
 [node name="Pivot" type="Spatial" parent="."]
 
-[node name="player" parent="Pivot" instance=ExtResource( 1 )]
+[node name="Character" parent="Pivot" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
